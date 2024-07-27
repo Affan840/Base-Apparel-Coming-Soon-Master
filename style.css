@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  /* background: rgb(255,255,255);
+background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,245,245,1) 100%);
+background: rgb(248,191,191);
+background: linear-gradient(135deg, rgba(248,191,191,1) 0%, rgba(238,140,140,1) 100%); */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: "Josefin Sans";
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 245, 245, 1) 100%
+  );
+}
+main {
+  background: url(images/bg-pattern-desktop.svg) no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mobile-logo {
+  display: none;
+}
+main article {
+  height: 100%;
+}
+main article:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 50px 0px 100px 140px;
+}
+main article h1 {
+  width: 60%;
+  letter-spacing: 20px;
+  margin-top: 100px;
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--Dark-Grayish-Red);
+}
+main article h1 span {
+  color: var(--Desaturated-Red);
+  display: block;
+  font-weight: 300;
+}
+main article p {
+  font-size: 1rem;
+  line-height: 1.6;
+  width: 65%;
+  color: var(--Desaturated-Red);
+  font-weight: 400;
+}
+
+
+main article picture {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+main article picture img {
+  height: 100%;
+  object-fit: fill;
+}
+main article form div {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+main article form div input {
+  padding: 20px 30px;
+  width: 70%;
+  border-radius: 5rem;
+  border: 1px solid var(--Desaturated-Red);
+  outline: none;
+  background-color: transparent;
+}
+main article form div input::placeholder {
+  color: var(--Desaturated-Red);
+  font-family: "Josefin Sans";
+}
+main article form div label {
+  position: absolute;
+  right: 45%;
+  display: none;
+}
+main article form div button {
+  cursor: pointer;
+  position: relative;
+  right: 12%;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 191, 191, 1) 0%,
+    rgba(238, 140, 140, 1) 100%
+  );
+  border: none;
+  outline: none;
+  padding: 17px 40px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 20px var(--Desaturated-Red);
+}
+main article form div button:active {
+  background: linear-gradient(
+    135deg,
+    rgb(244, 220, 220) 0%,
+    rgb(245, 175, 175) 100%
+  );
+}
+main article form p {
+  display: none;
+  margin: 6px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--Soft-Red);
+  opacity: 0.8;
+}
+@media (min-width: 1500px) {
+  main {
+    background: url(images/bg-pattern-desktop.svg) no-repeat;
+    background-size: cover;
+  }
+  main article form div input {
+    width: 55%;
+  }
+  main article form div label {
+    right: 55%;
+  }
+  main article form div button {
+    right: 8%;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+  .mobile-logo {
+    padding: 20px;
+    display: block;
+  }
+  main {
+    background: url(images/bg-pattern-desktop.svg) no-repeat;
+    width: 100vw;
+    height: max-content;
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+   main article{
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+   }
+   main article picture{
+    width: 100vw;
+   }
+main article picture img {
+      object-fit: contain;
+      height: auto;
+  width: 100%;
+}
+main article:first-of-type{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main article h1 {
+  letter-spacing: 12px;
+  width: 100%;
+  font-size: 3rem;
+  line-height: 1;
+}
+main article h1 span {
+  color: var(--Desaturated-Red);
+  display: block;
+  font-weight: 300;
+}
+main article p {
+  padding: 0 30px;
+  width: 100%;
+}
+main article form div {
+  width: auto;
+}
+main article form div input{
+  width: 300px;
+  padding: 16px 30px;
+}
+
+main article form div label{
+  right: 25%;
+}
+main article form div button {
+   right: -5%;
+  position: absolute;
+  padding: 14px 28px;
+}
+main article form p{
+  position: absolute;
+  left: -20%;
+}
+}
